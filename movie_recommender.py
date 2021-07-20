@@ -21,7 +21,7 @@ for feature in features:
 
 def combine_features(row):
 	try:
-		return row['keywords']+" "+ row['cast']+" "+ row['genres']+" "+ row['vote_count']+" "+ row['vote_average']
+		return row['keywords']+" "+ row['cast']+" "+ row['genres']
 	except:
 		print ("Error:",row)
 df["combined_features"] = df.apply(combine_features,axis=1)
